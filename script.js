@@ -81,17 +81,19 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.toggle('active');
 
       // Update button text
-      if (!isExpanded) {
-        this.textContent = 'Show Less';
-      } else {
-        // Restore original text based on context
-        var originalTexts = {
-          'about-details': 'Learn More',
-          'leadership-details': 'Read Full Message',
-          'materials-details': 'View Full Product List',
-          'procurement-details': 'View All Procurement Services'
-        };
-        this.textContent = originalTexts[targetId] || 'Read More';
+      var textEl = this.querySelector('.btn-read-more-text');
+      if (textEl) {
+        if (!isExpanded) {
+          textEl.textContent = 'Show Less';
+        } else {
+          var originalTexts = {
+            'about-details': 'Learn More',
+            'leadership-details': 'Read Full Message',
+            'materials-details': 'View Full Product List',
+            'procurement-details': 'View All Procurement Services'
+          };
+          textEl.textContent = originalTexts[targetId] || 'Read More';
+        }
       }
     });
   });
