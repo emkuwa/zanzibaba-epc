@@ -144,7 +144,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   overflow: hidden;
   /* Extra top padding to prevent navbar overlap */
-  padding-top: 100px;
+  padding-top: 120px;
 }
 .hero::before {
   content: '';
@@ -161,17 +161,18 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 0.6rem 1.75rem;
-  border-radius: 50px;
-  color: var(--white);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 22px;
+  border-radius: 999px;
+  color: var(--primary-blue);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   white-space: nowrap;
   font-weight: 600;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 .hero h1 {
   color: var(--white);
@@ -487,6 +488,102 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 .group-card-featured p { color: rgba(255,255,255,0.8); }
+
+/* About Expandable Sub-sections */
+.about-vision, .about-mission, .about-values, .about-safety, .about-strategy {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+.about-vision h4, .about-mission h4, .about-values h4, .about-safety h4, .about-strategy h4 {
+  font-size: 1.15rem;
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+}
+.about-vision > p, .about-mission > p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+.about-vision-pillars {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.about-pillar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--light-grey);
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+}
+.about-pillar svg { width: 18px; height: 18px; color: var(--accent-blue); }
+.about-pillar span { font-weight: 500; font-size: 0.9rem; color: var(--text-dark); }
+.about-mission-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-mission-point {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.875rem;
+  background: var(--light-grey);
+  border-radius: 8px;
+}
+.about-mission-point svg { width: 18px; height: 18px; color: var(--accent-blue); flex-shrink: 0; }
+.about-mission-point span { color: var(--text-muted); font-size: 0.9rem; }
+.about-values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.about-value-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--light-grey);
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+}
+.about-value-pill svg { width: 16px; height: 16px; color: var(--accent-blue); }
+.about-value-pill span { font-weight: 500; font-size: 0.85rem; color: var(--text-dark); }
+.about-safety-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.about-safety-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.875rem;
+  background: var(--light-grey);
+  border-radius: 8px;
+}
+.about-safety-item svg { width: 20px; height: 20px; color: var(--accent-blue); flex-shrink: 0; margin-top: 2px; }
+.about-safety-item strong { display: block; font-size: 0.9rem; color: var(--primary-blue); margin-bottom: 0.15rem; }
+.about-safety-item span { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+.about-strategy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.about-strategy-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--light-grey);
+  border-radius: 8px;
+  align-items: flex-start;
+}
+.about-strategy-num { font-size: 1.25rem; font-weight: 800; color: var(--accent-blue); min-width: 32px; }
+.about-strategy-item strong { display: block; font-size: 0.9rem; color: var(--primary-blue); margin-bottom: 0.15rem; }
+.about-strategy-item span { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 
 /* ============================================
    LEADERSHIP - COMPACT
@@ -1377,17 +1474,17 @@ svg { display: inline-block; vertical-align: middle; }
 
   /* Hero */
   .hero {
-    padding-top: 80px;
+    padding-top: 100px;
     min-height: 100vh;
     min-height: 100dvh;
   }
   .hero h1 { font-size: 2.25rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-badge {
-    font-size: 0.6rem;
-    padding: 0.4rem 0.875rem;
+    font-size: 0.65rem;
+    padding: 6px 16px;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   /* Sections */
@@ -1404,6 +1501,8 @@ svg { display: inline-block; vertical-align: middle; }
   /* About */
   .about-highlights { grid-template-columns: 1fr; }
   .group-cards { grid-template-columns: 1fr; }
+  .about-safety-grid { grid-template-columns: 1fr; }
+  .about-vision-pillars { flex-direction: column; }
 
   /* Leadership */
   .leadership-compact {
@@ -1465,6 +1564,19 @@ svg { display: inline-block; vertical-align: middle; }
   .nav-links a, .menu-toggle {
     min-height: 44px;
   }
+}
+
+/* ============================================
+   RESPONSIVE - SMALL MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+  .hero-badge {
+    font-size: 0.6rem;
+    padding: 5px 14px;
+    letter-spacing: 0.8px;
+  }
+  .hero h1 { font-size: 1.85rem; }
+  .hero-subtitle { font-size: 0.9rem; }
 }
 
 /* ============================================
