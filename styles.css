@@ -170,7 +170,7 @@ p {
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(10, 36, 99, 0.55) 0%, rgba(26, 26, 46, 0.65) 100%), url('image/Cover Page.png');
+  background: linear-gradient(135deg, rgba(10, 36, 99, 0.55) 0%, rgba(26, 26, 46, 0.65) 100%), url('image/Cover Page.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1098,7 +1098,7 @@ p {
 
 /* Contact Section */
 .contact-section {
-  background: linear-gradient(135deg, rgba(10, 36, 99, 0.92) 0%, rgba(26, 26, 46, 0.95) 100%), url('image/Closing Page.png');
+  background: linear-gradient(135deg, rgba(10, 36, 99, 0.92) 0%, rgba(26, 26, 46, 0.95) 100%), url('image/Closing Page.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
