@@ -1966,10 +1966,13 @@ svg {
   border: 1px solid var(--border-color);
 }
 
-.tanzania-map-professional svg {
+.coverage-map-image {
   width: 100%;
   height: auto;
   max-height: 500px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
 }
 
 .coverage-zones {
