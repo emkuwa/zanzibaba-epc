@@ -141,12 +141,25 @@ document.addEventListener('DOMContentLoaded', function() {
       var content = parent.querySelector('.service-expandable-content');
       if (!content) return;
       var isActive = parent.classList.contains('active');
+
       if (isActive) {
         collapseContainer(content);
         parent.classList.remove('active');
       } else {
+        // Close all other open service accordions
+        document.querySelectorAll('.service-expandable.active').forEach(function(other) {
+          if (other !== parent) {
+            var otherContent = other.querySelector('.service-expandable-content');
+            if (otherContent) collapseContainer(otherContent);
+            other.classList.remove('active');
+          }
+        });
         parent.classList.add('active');
         expandContainer(content);
+        // Scroll into view after short delay
+        setTimeout(function() {
+          parent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
       }
     });
   });
@@ -162,10 +175,22 @@ document.addEventListener('DOMContentLoaded', function() {
       var content = parent.querySelector('.service-sub-content');
       if (!content) return;
       var isActive = parent.classList.contains('active');
+
       if (isActive) {
         collapseContainer(content);
         parent.classList.remove('active');
       } else {
+        // Close other sub-sections within the same parent
+        var parentService = parent.closest('.service-expandable-content');
+        if (parentService) {
+          parentService.querySelectorAll('.service-sub-expandable.active').forEach(function(other) {
+            if (other !== parent) {
+              var otherContent = other.querySelector('.service-sub-content');
+              if (otherContent) collapseContainer(otherContent);
+              other.classList.remove('active');
+            }
+          });
+        }
         parent.classList.add('active');
         expandContainer(content);
       }
