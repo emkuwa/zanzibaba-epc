@@ -198,6 +198,41 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ==========================================
+  // LEARN MORE BUTTONS
+  // ==========================================
+  document.querySelectorAll('.btn-learn-more').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var targetId = this.getAttribute('data-target');
+      if (!targetId) return;
+      var parent = this.closest('.service-expandable');
+      if (!parent) return;
+      var content = document.getElementById(targetId);
+      if (!content) return;
+      var isActive = parent.classList.contains('active');
+
+      if (isActive) {
+        collapseContainer(content);
+        parent.classList.remove('active');
+      } else {
+        // Close all other open service accordions
+        document.querySelectorAll('.service-expandable.active').forEach(function(other) {
+          if (other !== parent) {
+            var otherContent = other.querySelector('.service-expandable-content');
+            if (otherContent) collapseContainer(otherContent);
+            other.classList.remove('active');
+          }
+        });
+        parent.classList.add('active');
+        expandContainer(content);
+        // Scroll into view after short delay
+        setTimeout(function() {
+          parent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    });
+  });
+
+  // ==========================================
   // SCROLL ANIMATIONS
   // ==========================================
   var observerOptions = {

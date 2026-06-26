@@ -887,24 +887,62 @@ a { color: inherit; text-decoration: none; }
 .service-expandable.active .expand-icon {
   transform: rotate(180deg);
 }
+.service-card-visual {
+  width: 100%;
+  overflow: hidden;
+  background: var(--light-grey);
+}
+.service-card-visual .service-hero-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-expandable:hover .service-card-visual .service-hero-img {
+  transform: scale(1.02);
+}
+.service-card-summary {
+  padding: 1rem 1.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.btn-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 1.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-learn-more:hover {
+  background: var(--primary-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+.service-sub-visual {
+  width: 100%;
+  overflow: hidden;
+  background: var(--light-grey);
+}
+.service-sub-visual .service-hero-img-tall {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 .service-expandable-content {
   height: 0;
   overflow: hidden;
   transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.service-hero-img {
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  display: block;
-  background: var(--light-grey);
-}
-.service-hero-img-tall {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  display: block;
-  background: var(--light-grey);
 }
 
 .service-items-grid {
@@ -1638,8 +1676,10 @@ svg { display: inline-block; vertical-align: middle; }
   .service-items-grid { grid-template-columns: 1fr; padding: 1rem 1.25rem 1.25rem; }
   .team-compact-grid { grid-template-columns: 1fr; padding: 0 1rem 1rem; }
   .service-sub-expandable { margin: 0 1rem 0.75rem; }
-  .service-hero-img { height: 200px; }
-  .service-hero-img-tall { height: 160px; }
+  .service-card-visual .service-hero-img { height: 220px; }
+  .service-sub-visual .service-hero-img-tall { height: 180px; }
+  .service-card-summary { padding: 0.75rem 1.25rem 0; font-size: 0.9rem; }
+  .btn-learn-more { margin: 0.75rem 1.25rem 1rem; padding: 0.5rem 1.25rem; font-size: 0.85rem; }
 
   /* Materials */
   .materials-grid { grid-template-columns: 1fr; }
@@ -1667,7 +1707,7 @@ svg { display: inline-block; vertical-align: middle; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }
 
   /* Touch targets - ensure minimum 44px */
-  .btn, .btn-read-more, .btn-submit,
+  .btn, .btn-read-more, .btn-submit, .btn-learn-more,
   .service-expandable-header, .service-sub-header,
   .nav-links a, .menu-toggle {
     min-height: 44px;
