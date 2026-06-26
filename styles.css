@@ -906,6 +906,22 @@ a { color: inherit; text-decoration: none; }
 .btn-view-details:hover {
   background: var(--dark-navy);
 }
+.svc-card-text {
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+.svc-card-text h3 {
+  padding-top: 0;
+  color: var(--primary-blue);
+}
+.svc-card-text p {
+  color: var(--text-muted);
+}
 .svc-details {
   display: none;
   border-top: 1px solid var(--border-color);
