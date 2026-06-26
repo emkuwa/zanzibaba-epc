@@ -8,7 +8,29 @@
   <meta name="keywords" content="EPC, engineering, procurement, construction, Tanzania, Zanzibar, infrastructure, MEP, civil engineering, industrial projects, irrigation">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zanzibaba EPC",
+    "url": "https://epc.zanzibaba.com",
+    "logo": "https://epc.zanzibaba.com/image/logo.png",
+    "description": "Premium Engineering, Procurement & Construction solutions provider in Tanzania. Delivering world-class infrastructure projects across Mainland Tanzania and Zanzibar.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zanzibar",
+      "addressCountry": "TZ"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Tanzania"
+    },
+    "knowsAbout": ["EPC", "Engineering", "Procurement", "Construction", "Civil Engineering", "MEP Services", "Irrigation", "Industrial Projects"],
+    "telephone": "+255716002790",
+    "email": "info@zanzibaba.com"
+  }
+  </script>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="image/logo.png">
   <link rel="apple-touch-icon" href="image/logo.png">
@@ -325,7 +347,7 @@
             <span class="capability-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg></span>
           </div>
         </a>
-        <a href="#services" class="capability-card animate-on-scroll">
+        <a href="#service-materials" class="capability-card animate-on-scroll">
           <div class="capability-img">
             <img src="image/Construction Materials Supply.jpg" alt="Construction Materials Supply" loading="lazy">
           </div>
@@ -335,7 +357,7 @@
             <span class="capability-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg></span>
           </div>
         </a>
-        <a href="#services" class="capability-card animate-on-scroll">
+        <a href="#service-procurement" class="capability-card animate-on-scroll">
           <div class="capability-img">
             <img src="image/Procurement & Supply Chain Solutions.jpg" alt="Procurement & Supply Chain" loading="lazy">
           </div>
@@ -647,6 +669,7 @@
           <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
         </div>
         <div class="service-expandable-content" id="mep-content">
+          <img src="image/MEP Services.jpg" alt="MEP Services" class="service-hero-img" loading="lazy">
           <div class="service-items-grid">
             <div class="service-item-compact"><h4>Mechanical Systems</h4><p>HVAC, plumbing, fire protection and industrial mechanical installations</p></div>
             <div class="service-item-compact"><h4>Electrical Systems</h4><p>Power distribution, lighting, emergency power and communications</p></div>
@@ -715,15 +738,36 @@
         </div>
         <div class="service-expandable-content" id="irrigation-content">
           <img src="image/Water Infrastructure.jpg" alt="Water Infrastructure" class="service-hero-img" loading="lazy">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Irrigation Infrastructure</h4><p>Drip, sprinkler, flood irrigation and large-scale schemes</p></div>
-            <div class="service-item-compact"><h4>Irrigation Networks</h4><p>Main canals, distributary channels and water distribution</p></div>
-            <div class="service-item-compact"><h4>Water Conveyance</h4><p>Open channels, lined canals, pipelines and flumes</p></div>
-            <div class="service-item-compact"><h4>HDPE & PVC Pipelines</h4><p>Water supply, irrigation and drainage pipe networks</p></div>
-            <div class="service-item-compact"><h4>Pumping Systems</h4><p>Centrifugal, submersible pumps and booster systems</p></div>
-            <div class="service-item-compact"><h4>Water Storage</h4><p>Ground tanks, elevated tanks and reservoirs</p></div>
-            <div class="service-item-compact"><h4>Canal Construction</h4><p>Irrigation canal construction, lining and rehabilitation</p></div>
-            <div class="service-item-compact"><h4>Agricultural Water</h4><p>Water harvesting, scheduling and optimization</p></div>
+          <!-- Irrigation Projects Sub-section -->
+          <div class="service-sub-expandable">
+            <div class="service-sub-header" data-toggle="irrigation-projects-content">
+              <h4>Irrigation Projects</h4>
+              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
+            </div>
+            <div class="service-sub-content" id="irrigation-projects-content">
+              <img src="image/Irrigation Projects.jpg" alt="Irrigation Projects" class="service-hero-img-tall" loading="lazy">
+              <div class="service-items-grid">
+                <div class="service-item-compact"><h4>Irrigation Infrastructure</h4><p>Drip, sprinkler, flood irrigation and large-scale schemes</p></div>
+                <div class="service-item-compact"><h4>Irrigation Networks</h4><p>Main canals, distributary channels and water distribution</p></div>
+                <div class="service-item-compact"><h4>Canal Construction</h4><p>Irrigation canal construction, lining and rehabilitation</p></div>
+                <div class="service-item-compact"><h4>Agricultural Water</h4><p>Water harvesting, scheduling and optimization</p></div>
+              </div>
+            </div>
+          </div>
+          <!-- Water Infrastructure Sub-section -->
+          <div class="service-sub-expandable">
+            <div class="service-sub-header" data-toggle="water-infra-content">
+              <h4>Water Infrastructure</h4>
+              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
+            </div>
+            <div class="service-sub-content" id="water-infra-content">
+              <div class="service-items-grid">
+                <div class="service-item-compact"><h4>Water Conveyance</h4><p>Open channels, lined canals, pipelines and flumes</p></div>
+                <div class="service-item-compact"><h4>HDPE & PVC Pipelines</h4><p>Water supply, irrigation and drainage pipe networks</p></div>
+                <div class="service-item-compact"><h4>Pumping Systems</h4><p>Centrifugal, submersible pumps and booster systems</p></div>
+                <div class="service-item-compact"><h4>Water Storage</h4><p>Ground tanks, elevated tanks and reservoirs</p></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -762,6 +806,7 @@
           <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
         </div>
         <div class="service-expandable-content" id="industrial-content">
+          <img src="image/Industrial Projects.jpg" alt="Industrial Projects" class="service-hero-img" loading="lazy">
           <div class="service-items-grid">
             <div class="service-item-compact"><h4>Factories</h4><p>Complete factory construction including production, warehousing and utilities</p></div>
             <div class="service-item-compact"><h4>Processing Plants</h4><p>Food, beverage and industrial processing facilities</p></div>
@@ -809,6 +854,46 @@
                 <div class="service-item-compact"><h4>Water Management</h4><p>Dams, reservoirs and treatment facilities</p></div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Construction Materials Supply -->
+      <div class="service-expandable" id="service-materials">
+        <div class="service-expandable-header" data-toggle="materials-content">
+          <div class="service-expandable-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-concrete"/></svg>
+            <h3>Construction Materials Supply</h3>
+          </div>
+          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
+        </div>
+        <div class="service-expandable-content" id="materials-content">
+          <img src="image/Construction Materials Supply.jpg" alt="Construction Materials Supply" class="service-hero-img" loading="lazy">
+          <div class="service-items-grid">
+            <div class="service-item-compact"><h4>Concrete Products</h4><p>Ready-mix concrete, precast elements and concrete blocks</p></div>
+            <div class="service-item-compact"><h4>Steel Products</h4><p>Structural steel, reinforcement bars and steel fittings</p></div>
+            <div class="service-item-compact"><h4>Aggregates</h4><p>Sand, gravel, crushed stone and fill materials</p></div>
+            <div class="service-item-compact"><h4>Finishing Materials</h4><p>Plaster, paint, tiles, sanitary ware and fittings</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Procurement & Supply Chain -->
+      <div class="service-expandable" id="service-procurement">
+        <div class="service-expandable-header" data-toggle="procurement-content">
+          <div class="service-expandable-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-procurement"/></svg>
+            <h3>Procurement & Supply Chain Solutions</h3>
+          </div>
+          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
+        </div>
+        <div class="service-expandable-content" id="procurement-content">
+          <img src="image/Procurement & Supply Chain Solutions.jpg" alt="Procurement & Supply Chain Solutions" class="service-hero-img" loading="lazy">
+          <div class="service-items-grid">
+            <div class="service-item-compact"><h4>Vendor Sourcing</h4><p>Global supplier identification, evaluation and qualification</p></div>
+            <div class="service-item-compact"><h4>Logistics Management</h4><p>Freight forwarding, customs clearance and delivery coordination</p></div>
+            <div class="service-item-compact"><h4>Materials Distribution</h4><p>Warehousing, inventory management and site delivery</p></div>
+            <div class="service-item-compact"><h4>Cost Optimization</h4><p>Bulk purchasing, price negotiation and value engineering</p></div>
           </div>
         </div>
       </div>
@@ -943,12 +1028,12 @@
           <form>
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Your name">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Your name" required>
               </div>
               <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="your@email.com">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
               </div>
             </div>
             <div class="form-row">
@@ -1003,14 +1088,15 @@
           <li><a href="#service-mep">MEP Services</a></li>
           <li><a href="#service-irrigation">Water & Irrigation</a></li>
           <li><a href="#service-drainage">Drainage Infrastructure</a></li>
+          <li><a href="#service-materials">Materials Supply</a></li>
         </ul>
       </div>
       <div class="footer-links">
         <h4>Projects</h4>
         <ul>
           <li><a href="#service-industrial">Industrial</a></li>
-          <li><a href="#service-civil">Civil Engineering</a></li>
-          <li><a href="#service-mep">MEP Services</a></li>
+          <li><a href="#service-materials">Materials Supply</a></li>
+          <li><a href="#service-procurement">Procurement</a></li>
           <li><a href="#locations">Coverage</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
