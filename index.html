@@ -605,382 +605,404 @@
     </div>
   </section>
 
-  <!-- 9. Services Detail (Expandable Sections) -->
+  <!-- 9. Services Grid (All 26 services visible) -->
   <section class="page-section" id="services">
     <div class="section-container">
       <div class="section-header">
         <span class="section-tag">Services</span>
         <h2>Our Services</h2>
-        <p>Detailed service capabilities across all disciplines</p>
+        <p>Complete EPC capabilities across all disciplines</p>
       </div>
+      <div class="services-grid">
 
-      <!-- Civil & Structural -->
-      <div class="service-expandable" id="service-civil">
-        <div class="service-expandable-header" data-toggle="civil-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-infra"/></svg>
-            <h3>Civil & Structural Engineering</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Civil & Structural Engineering.jpg" alt="Civil & Structural Engineering" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Comprehensive civil and structural engineering solutions for foundations, concrete structures, roads and infrastructure.</p>
-        <button class="btn-learn-more" data-target="civil-content">Learn More</button>
-        <div class="service-expandable-content" id="civil-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Earthworks</h4><p>Site preparation, grading, and earthmoving operations</p></div>
-            <div class="service-item-compact"><h4>Excavation</h4><p>Foundation excavation, trenching with proper shoring and safety</p></div>
-            <div class="service-item-compact"><h4>Foundations</h4><p>Shallow and deep foundation systems including piles and rafts</p></div>
-            <div class="service-item-compact"><h4>Concrete Structures</h4><p>Reinforced concrete works for buildings, bridges and infrastructure</p></div>
-            <div class="service-item-compact"><h4>Structural Works</h4><p>Steel and concrete structural systems for all building types</p></div>
-            <div class="service-item-compact"><h4>Roads & Pavements</h4><p>Earthworks, sub-base, asphalt paving and concrete road construction</p></div>
-            <div class="service-item-compact"><h4>Infrastructure Works</h4><p>Bridges, culverts, retaining walls and civil infrastructure</p></div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Civil & Structural Engineering.jpg" alt="Civil & Structural Engineering"></div>
+          <h3>Civil & Structural Engineering</h3>
+          <p>Foundations, concrete structures, roads and infrastructure works.</p>
+          <button class="btn-view-details" data-target="svc-civil">View Details</button>
+          <div class="svc-details" id="svc-civil">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Earthworks</h4><p>Site preparation, grading, and earthmoving</p></div>
+              <div class="service-item-compact"><h4>Excavation</h4><p>Foundation excavation with proper shoring</p></div>
+              <div class="service-item-compact"><h4>Foundations</h4><p>Shallow and deep foundation systems</p></div>
+              <div class="service-item-compact"><h4>Concrete Structures</h4><p>Reinforced concrete works</p></div>
+              <div class="service-item-compact"><h4>Structural Works</h4><p>Steel and concrete structural systems</p></div>
+              <div class="service-item-compact"><h4>Roads & Pavements</h4><p>Asphalt paving and concrete roads</p></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Architecture & Design -->
-      <div class="service-expandable" id="service-architecture">
-        <div class="service-expandable-header" data-toggle="architecture-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-layers"/></svg>
-            <h3>Architecture & Design</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Architecture & Design.jpg" alt="Architecture & Design" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">End-to-end architectural design from concept development through detailed documentation and construction coordination.</p>
-        <button class="btn-learn-more" data-target="architecture-content">Learn More</button>
-        <div class="service-expandable-content" id="architecture-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Architectural Design</h4><p>Concept development through detailed documentation</p></div>
-            <div class="service-item-compact"><h4>Master Planning</h4><p>Large-scale master planning for developments and campuses</p></div>
-            <div class="service-item-compact"><h4>Space Planning</h4><p>Efficient space utilization for all building types</p></div>
-            <div class="service-item-compact"><h4>Interior Design</h4><p>Material selection, furniture layout and aesthetic coordination</p></div>
-            <div class="service-item-compact"><h4>Shop Drawings</h4><p>Detailed construction drawings for accurate execution</p></div>
-            <div class="service-item-compact"><h4>Design Coordination</h4><p>Integrated coordination across all disciplines</p></div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Architecture & Design.jpg" alt="Architecture & Design"></div>
+          <h3>Architecture & Design</h3>
+          <p>Concept development through detailed documentation and coordination.</p>
+          <button class="btn-view-details" data-target="svc-arch">View Details</button>
+          <div class="svc-details" id="svc-arch">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Architectural Design</h4><p>Concept through detailed documentation</p></div>
+              <div class="service-item-compact"><h4>Master Planning</h4><p>Large-scale planning for campuses</p></div>
+              <div class="service-item-compact"><h4>Interior Design</h4><p>Material selection and coordination</p></div>
+              <div class="service-item-compact"><h4>Shop Drawings</h4><p>Detailed construction drawings</p></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- MEP Services -->
-      <div class="service-expandable" id="service-mep">
-        <div class="service-expandable-header" data-toggle="mep-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-zap"/></svg>
-            <h3>MEP Services</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/MEP Services.jpg" alt="MEP Services" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Integrated mechanical, electrical and plumbing systems for commercial, industrial and infrastructure projects.</p>
-        <button class="btn-learn-more" data-target="mep-content">Learn More</button>
-        <div class="service-expandable-content" id="mep-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Mechanical Systems</h4><p>HVAC, plumbing, fire protection and industrial mechanical installations</p></div>
-            <div class="service-item-compact"><h4>Electrical Systems</h4><p>Power distribution, lighting, emergency power and communications</p></div>
-            <div class="service-item-compact"><h4>Plumbing Systems</h4><p>Water supply, drainage, sewage and sanitary fittings</p></div>
-            <div class="service-item-compact"><h4>Utility Services</h4><p>Water treatment, power generation and distribution networks</p></div>
-          </div>
-          <!-- HVAC Sub-section -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="hvac-content">
-              <h4>HVAC Systems</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/HVAC Systems.jpg" alt="HVAC Systems" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="hvac-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Air Conditioning</h4><p>Split, VRF/VRV, ducted and central systems</p></div>
-                <div class="service-item-compact"><h4>Ventilation</h4><p>Fresh air, exhaust, kitchen and industrial ventilation</p></div>
-                <div class="service-item-compact"><h4>Chilled Water</h4><p>Central chillers, cooling towers and AHUs</p></div>
-                <div class="service-item-compact"><h4>Mechanical Installations</h4><p>Ductwork, piping, insulation and controls</p></div>
-              </div>
-            </div>
-          </div>
-          <!-- Fire Fighting Sub-section -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="fire-content">
-              <h4>Fire Fighting & Life Safety</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Fire Fighting Systems.jpg" alt="Fire Fighting Systems" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="fire-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Fire Alarm Systems</h4><p>Detection, notification and alarm systems</p></div>
-                <div class="service-item-compact"><h4>Fire Fighting</h4><p>Hydrant systems, hose reels and fire pumps</p></div>
-                <div class="service-item-compact"><h4>Sprinkler Systems</h4><p>Automatic sprinkler, deluge and pre-action systems</p></div>
-                <div class="service-item-compact"><h4>Safety Compliance</h4><p>Fire assessments, documentation and training</p></div>
-              </div>
-            </div>
-          </div>
-          <!-- Lift Systems Sub-section -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="lift-content">
-              <h4>Lift & Elevator Systems</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Lift & Elevator Systems.jpg" alt="Lift & Elevator Systems" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="lift-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Supply</h4><p>Passenger, goods, hospital and panoramic elevators</p></div>
-                <div class="service-item-compact"><h4>Installation</h4><p>Professional installation with civil and electrical works</p></div>
-                <div class="service-item-compact"><h4>Testing</h4><p>Load testing, safety inspections and commissioning</p></div>
-                <div class="service-item-compact"><h4>Maintenance</h4><p>Preventive maintenance, repairs and modernization</p></div>
-              </div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Civil & Structural Engineering.jpg" alt="Project Management"></div>
+          <h3>Project Management</h3>
+          <p>End-to-end project planning, execution and delivery oversight.</p>
+          <button class="btn-view-details" data-target="svc-pm">View Details</button>
+          <div class="svc-details" id="svc-pm">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Planning & Scheduling</h4><p>Timeline development and resource allocation</p></div>
+              <div class="service-item-compact"><h4>Cost Control</h4><p>Budget tracking and financial reporting</p></div>
+              <div class="service-item-compact"><h4>Risk Management</h4><p>Identifying and mitigating project risks</p></div>
+              <div class="service-item-compact"><h4>Stakeholder Reporting</h4><p>Progress reports and client communication</p></div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Irrigation & Water -->
-      <div class="service-expandable" id="service-irrigation">
-        <div class="service-expandable-header" data-toggle="irrigation-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-leaf"/></svg>
-            <h3>Irrigation & Water Infrastructure</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Irrigation Projects.jpg" alt="Irrigation & Water Infrastructure" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Complete irrigation networks, water supply systems and pipeline infrastructure for agricultural and municipal projects.</p>
-        <button class="btn-learn-more" data-target="irrigation-content">Learn More</button>
-        <div class="service-expandable-content" id="irrigation-content">
-          <!-- Irrigation Projects Sub-section -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="irrigation-projects-content">
-              <h4>Irrigation Projects</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Irrigation Projects.jpg" alt="Irrigation Projects" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="irrigation-projects-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Irrigation Infrastructure</h4><p>Drip, sprinkler, flood irrigation and large-scale schemes</p></div>
-                <div class="service-item-compact"><h4>Irrigation Networks</h4><p>Main canals, distributary channels and water distribution</p></div>
-                <div class="service-item-compact"><h4>Canal Construction</h4><p>Irrigation canal construction, lining and rehabilitation</p></div>
-                <div class="service-item-compact"><h4>Agricultural Water</h4><p>Water harvesting, scheduling and optimization</p></div>
-              </div>
-            </div>
-          </div>
-          <!-- Water Infrastructure Sub-section -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="water-infra-content">
-              <h4>Water Infrastructure</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Water Infrastructure.jpg" alt="Water Infrastructure" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="water-infra-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Water Conveyance</h4><p>Open channels, lined canals, pipelines and flumes</p></div>
-                <div class="service-item-compact"><h4>HDPE & PVC Pipelines</h4><p>Water supply, irrigation and drainage pipe networks</p></div>
-                <div class="service-item-compact"><h4>Pumping Systems</h4><p>Centrifugal, submersible pumps and booster systems</p></div>
-                <div class="service-item-compact"><h4>Water Storage</h4><p>Ground tanks, elevated tanks and reservoirs</p></div>
-              </div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Architecture & Design.jpg" alt="Engineering Consultancy"></div>
+          <h3>Engineering Consultancy</h3>
+          <p>Technical advisory, feasibility studies and engineering design.</p>
+          <button class="btn-view-details" data-target="svc-consult">View Details</button>
+          <div class="svc-details" id="svc-consult">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Feasibility Studies</h4><p>Technical and economic viability analysis</p></div>
+              <div class="service-item-compact"><h4>Design Review</h4><p>Independent technical assessment</p></div>
+              <div class="service-item-compact"><h4>Value Engineering</h4><p>Optimizing cost without compromising quality</p></div>
+              <div class="service-item-compact"><h4>Technical Advisory</h4><p>Expert guidance throughout project lifecycle</p></div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drainage -->
-      <div class="service-expandable" id="service-drainage">
-        <div class="service-expandable-header" data-toggle="drainage-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-infra"/></svg>
-            <h3>Drainage & Storm Water Infrastructure</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Drainage Systems.jpg" alt="Drainage Systems" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Storm water management, surface drainage and flood mitigation infrastructure for urban and rural areas.</p>
-        <button class="btn-learn-more" data-target="drainage-content">Learn More</button>
-        <div class="service-expandable-content" id="drainage-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Storm Water Systems</h4><p>Collection networks, conveyance channels and detention basins</p></div>
-            <div class="service-item-compact"><h4>Surface Drainage</h4><p>Roadside drains, catch drains and cross-drainage structures</p></div>
-            <div class="service-item-compact"><h4>Concrete Channels</h4><p>Precast and cast-in-situ concrete drainage channels</p></div>
-            <div class="service-item-compact"><h4>Box Culverts</h4><p>Precast and cast-in-situ box culverts for crossings</p></div>
-            <div class="service-item-compact"><h4>Pipe Culverts</h4><p>Pipe culverts with headwalls and wingwalls</p></div>
-            <div class="service-item-compact"><h4>Catch Pits & Manholes</h4><p>Inspection chambers and junction structures</p></div>
-            <div class="service-item-compact"><h4>Flood Mitigation</h4><p>Flood walls, levees, retention ponds and diversion channels</p></div>
-            <div class="service-item-compact"><h4>Drainage Rehabilitation</h4><p>Desilting, restoration and capacity enhancement</p></div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Procurement & Supply Chain Solutions.jpg" alt="Procurement & Supply Chain"></div>
+          <h3>Procurement & Supply Chain</h3>
+          <p>Vendor sourcing, logistics and materials distribution.</p>
+          <button class="btn-view-details" data-target="svc-procure">View Details</button>
+          <div class="svc-details" id="svc-procure">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Vendor Sourcing</h4><p>Global supplier identification</p></div>
+              <div class="service-item-compact"><h4>Logistics</h4><p>Freight forwarding and customs clearance</p></div>
+              <div class="service-item-compact"><h4>Warehousing</h4><p>Inventory management and site delivery</p></div>
+              <div class="service-item-compact"><h4>Cost Optimization</h4><p>Bulk purchasing and negotiation</p></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Industrial -->
-      <div class="service-expandable" id="service-industrial">
-        <div class="service-expandable-header" data-toggle="industrial-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-plant"/></svg>
-            <h3>Industrial Projects</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Industrial Projects.jpg" alt="Industrial Projects" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Complete industrial facilities including factories, processing plants, warehouses and commercial developments.</p>
-        <button class="btn-learn-more" data-target="industrial-content">Learn More</button>
-        <div class="service-expandable-content" id="industrial-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Factories</h4><p>Complete factory construction including production, warehousing and utilities</p></div>
-            <div class="service-item-compact"><h4>Processing Plants</h4><p>Food, beverage and industrial processing facilities</p></div>
-            <div class="service-item-compact"><h4>Warehouses</h4><p>Large-span warehouses with loading docks and logistics</p></div>
-            <div class="service-item-compact"><h4>Industrial Facilities</h4><p>Maintenance workshops, utility buildings and support facilities</p></div>
-          </div>
-          <!-- Commercial & Hospitality sub-sections -->
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="commercial-content">
-              <h4>Commercial Developments</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Commercial Developments.jpg" alt="Commercial Developments" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="commercial-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Shopping Complexes</h4><p>Retail developments with anchor spaces and food courts</p></div>
-                <div class="service-item-compact"><h4>Office Buildings</h4><p>Class A offices with modern amenities</p></div>
-                <div class="service-item-compact"><h4>Mixed-Use</h4><p>Integrated retail, office, residential and hospitality</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="hospitality-content">
-              <h4>Hospitality Projects</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Hospitality Projects.jpg" alt="Hospitality Projects" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="hospitality-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Hotels</h4><p>Boutique to large conference hotels</p></div>
-                <div class="service-item-compact"><h4>Resorts</h4><p>Luxury villas, recreational facilities and landscaping</p></div>
-                <div class="service-item-compact"><h4>Tourism Infrastructure</h4><p>Airport facilities, conference centers and lodges</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="service-sub-expandable">
-            <div class="service-sub-header" data-toggle="agricultural-content">
-              <h4>Agricultural Infrastructure</h4>
-              <svg class="expand-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-            </div>
-            <div class="service-sub-visual">
-              <img src="image/Agricultural Infrastructure.jpg" alt="Agricultural Infrastructure" class="service-hero-img-tall">
-            </div>
-            <div class="service-sub-content" id="agricultural-content">
-              <div class="service-items-grid">
-                <div class="service-item-compact"><h4>Farm Infrastructure</h4><p>Farm buildings, storage and processing units</p></div>
-                <div class="service-item-compact"><h4>Irrigation Systems</h4><p>Canals, pumps and distribution networks</p></div>
-                <div class="service-item-compact"><h4>Water Management</h4><p>Dams, reservoirs and treatment facilities</p></div>
-              </div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Civil & Structural Engineering.jpg" alt="Construction Management"></div>
+          <h3>Construction Management</h3>
+          <p>On-site coordination of trades, schedules and quality control.</p>
+          <button class="btn-view-details" data-target="svc-cm">View Details</button>
+          <div class="svc-details" id="svc-cm">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Schedule Control</h4><p>Critical path monitoring and adjustment</p></div>
+              <div class="service-item-compact"><h4>Quality Assurance</h4><p>Inspection and compliance verification</p></div>
+              <div class="service-item-compact"><h4>Contractor Coordination</h4><p>Multi-trade management and sequencing</p></div>
+              <div class="service-item-compact"><h4>Progress Reporting</h4><p>Weekly dashboards and milestone tracking</p></div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Construction Materials Supply -->
-      <div class="service-expandable" id="service-materials">
-        <div class="service-expandable-header" data-toggle="materials-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-concrete"/></svg>
-            <h3>Construction Materials Supply</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Construction Materials Supply.jpg" alt="Construction Materials Supply" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">Reliable supply of concrete products, steel, aggregates and finishing materials for construction projects.</p>
-        <button class="btn-learn-more" data-target="materials-content">Learn More</button>
-        <div class="service-expandable-content" id="materials-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Concrete Products</h4><p>Ready-mix concrete, precast elements and concrete blocks</p></div>
-            <div class="service-item-compact"><h4>Steel Products</h4><p>Structural steel, reinforcement bars and steel fittings</p></div>
-            <div class="service-item-compact"><h4>Aggregates</h4><p>Sand, gravel, crushed stone and fill materials</p></div>
-            <div class="service-item-compact"><h4>Finishing Materials</h4><p>Plaster, paint, tiles, sanitary ware and fittings</p></div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Architecture & Design.jpg" alt="Building Construction"></div>
+          <h3>Building Construction</h3>
+          <p>Commercial, residential and institutional building delivery.</p>
+          <button class="btn-view-details" data-target="svc-building">View Details</button>
+          <div class="svc-details" id="svc-building">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Commercial Buildings</h4><p>Offices, retail and mixed-use</p></div>
+              <div class="service-item-compact"><h4>Residential</h4><p>Villas, apartments and housing</p></div>
+              <div class="service-item-compact"><h4>Institutional</h4><p>Schools, hospitals and government</p></div>
+              <div class="service-item-compact"><h4>Fit-Out Works</h4><p>Interior finishing and furnishing</p></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Procurement & Supply Chain -->
-      <div class="service-expandable" id="service-procurement">
-        <div class="service-expandable-header" data-toggle="procurement-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-procurement"/></svg>
-            <h3>Procurement & Supply Chain Solutions</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-card-visual">
-          <img src="image/Procurement & Supply Chain Solutions.jpg" alt="Procurement & Supply Chain Solutions" class="service-hero-img">
-        </div>
-        <p class="service-card-summary">End-to-end procurement services including vendor sourcing, logistics management and cost optimization.</p>
-        <button class="btn-learn-more" data-target="procurement-content">Learn More</button>
-        <div class="service-expandable-content" id="procurement-content">
-          <div class="service-items-grid">
-            <div class="service-item-compact"><h4>Vendor Sourcing</h4><p>Global supplier identification, evaluation and qualification</p></div>
-            <div class="service-item-compact"><h4>Logistics Management</h4><p>Freight forwarding, customs clearance and delivery coordination</p></div>
-            <div class="service-item-compact"><h4>Materials Distribution</h4><p>Warehousing, inventory management and site delivery</p></div>
-            <div class="service-item-compact"><h4>Cost Optimization</h4><p>Bulk purchasing, price negotiation and value engineering</p></div>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Industrial Projects.jpg" alt="Industrial Projects"></div>
+          <h3>Industrial Projects</h3>
+          <p>Factories, processing plants and warehouse facilities.</p>
+          <button class="btn-view-details" data-target="svc-industrial">View Details</button>
+          <div class="svc-details" id="svc-industrial">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Factories</h4><p>Complete production facilities</p></div>
+              <div class="service-item-compact"><h4>Processing Plants</h4><p>Food, beverage and industrial</p></div>
+              <div class="service-item-compact"><h4>Warehouses</h4><p>Large-span with loading docks</p></div>
+              <div class="service-item-compact"><h4>Utility Buildings</h4><p>Maintenance workshops and support</p></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Team -->
-      <div class="service-expandable" id="service-team">
-        <div class="service-expandable-header" data-toggle="team-content">
-          <div class="service-expandable-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-team"/></svg>
-            <h3>Engineering & Project Management Team</h3>
-          </div>
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-chevron-down"/></svg>
-        </div>
-        <div class="service-expandable-content" id="team-content">
-          <div class="team-compact-grid">
-            <div class="team-compact-item">
-              <div class="team-compact-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-project"/></svg></div>
-              <h4>Project Manager</h4>
-              <p>Oversees planning, execution, delivery, resources, timelines and budgets</p>
-            </div>
-            <div class="team-compact-item">
-              <div class="team-compact-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-engineering"/></svg></div>
-              <h4>Civil & Structural Engineer</h4>
-              <p>Structural design, foundation analysis and civil works engineering</p>
-            </div>
-            <div class="team-compact-item">
-              <div class="team-compact-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-zap"/></svg></div>
-              <h4>MEP Engineer</h4>
-              <p>Mechanical, electrical and plumbing systems coordination</p>
-            </div>
-            <div class="team-compact-item">
-              <div class="team-compact-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-layers"/></svg></div>
-              <h4>Architect</h4>
-              <p>Architectural design, space planning and aesthetic coordination</p>
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Commercial Developments.jpg" alt="Commercial Developments"></div>
+          <h3>Commercial Developments</h3>
+          <p>Shopping complexes, offices and mixed-use projects.</p>
+          <button class="btn-view-details" data-target="svc-commercial">View Details</button>
+          <div class="svc-details" id="svc-commercial">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Shopping Complexes</h4><p>Retail with anchor spaces</p></div>
+              <div class="service-item-compact"><h4>Office Buildings</h4><p>Class A offices with amenities</p></div>
+              <div class="service-item-compact"><h4>Mixed-Use</h4><p>Retail, office and residential</p></div>
             </div>
           </div>
         </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Hospitality Projects.jpg" alt="Hospitality Projects"></div>
+          <h3>Hospitality Projects</h3>
+          <p>Hotels, resorts and tourism infrastructure.</p>
+          <button class="btn-view-details" data-target="svc-hospitality">View Details</button>
+          <div class="svc-details" id="svc-hospitality">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Hotels</h4><p>Boutique to conference hotels</p></div>
+              <div class="service-item-compact"><h4>Resorts</h4><p>Luxury villas and recreation</p></div>
+              <div class="service-item-compact"><h4>Tourism Infrastructure</h4><p>Airport and conference facilities</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Agricultural Infrastructure.jpg" alt="Agricultural Infrastructure"></div>
+          <h3>Agricultural Infrastructure</h3>
+          <p>Farm buildings, storage and processing facilities.</p>
+          <button class="btn-view-details" data-target="svc-agri">View Details</button>
+          <div class="svc-details" id="svc-agri">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Farm Buildings</h4><p>Storage and processing units</p></div>
+              <div class="service-item-compact"><h4>Irrigation Systems</h4><p>Canals, pumps and networks</p></div>
+              <div class="service-item-compact"><h4>Water Management</h4><p>Dams and treatment facilities</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Water Infrastructure.jpg" alt="Water Infrastructure"></div>
+          <h3>Water Infrastructure</h3>
+          <p>Water supply systems, pipelines and pumping stations.</p>
+          <button class="btn-view-details" data-target="svc-water">View Details</button>
+          <div class="svc-details" id="svc-water">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Water Conveyance</h4><p>Channels, pipelines and flumes</p></div>
+              <div class="service-item-compact"><h4>Pipelines</h4><p>HDPE and PVC pipe networks</p></div>
+              <div class="service-item-compact"><h4>Pumping Systems</h4><p>Centrifugal and submersible pumps</p></div>
+              <div class="service-item-compact"><h4>Water Storage</h4><p>Tanks, elevated tanks and reservoirs</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Irrigation Projects.jpg" alt="Irrigation Projects"></div>
+          <h3>Irrigation Projects</h3>
+          <p>Drip, sprinkler and large-scale irrigation schemes.</p>
+          <button class="btn-view-details" data-target="svc-irrigation">View Details</button>
+          <div class="svc-details" id="svc-irrigation">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Irrigation Infrastructure</h4><p>Drip, sprinkler and flood systems</p></div>
+              <div class="service-item-compact"><h4>Canal Construction</h4><p>Lining and rehabilitation</p></div>
+              <div class="service-item-compact"><h4>Agricultural Water</h4><p>Harvesting and scheduling</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Drainage Systems.jpg" alt="Drainage & Storm Water"></div>
+          <h3>Drainage & Storm Water</h3>
+          <p>Storm water management and flood mitigation infrastructure.</p>
+          <button class="btn-view-details" data-target="svc-drainage">View Details</button>
+          <div class="svc-details" id="svc-drainage">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Storm Water Systems</h4><p>Collection and conveyance</p></div>
+              <div class="service-item-compact"><h4>Concrete Channels</h4><p>Precast and cast-in-situ</p></div>
+              <div class="service-item-compact"><h4>Box Culverts</h4><p>Crossings and headwalls</p></div>
+              <div class="service-item-compact"><h4>Flood Mitigation</h4><p>Walls, levees and retention</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/MEP Services.jpg" alt="MEP Services"></div>
+          <h3>MEP Services</h3>
+          <p>Mechanical, electrical and plumbing systems integration.</p>
+          <button class="btn-view-details" data-target="svc-mep">View Details</button>
+          <div class="svc-details" id="svc-mep">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Mechanical</h4><p>HVAC, fire protection and industrial</p></div>
+              <div class="service-item-compact"><h4>Electrical</h4><p>Power distribution and lighting</p></div>
+              <div class="service-item-compact"><h4>Plumbing</h4><p>Water supply and sanitary fittings</p></div>
+              <div class="service-item-compact"><h4>Utilities</h4><p>Water treatment and power generation</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/HVAC Systems.jpg" alt="HVAC Systems"></div>
+          <h3>HVAC Systems</h3>
+          <p>Air conditioning, ventilation and chilled water systems.</p>
+          <button class="btn-view-details" data-target="svc-hvac">View Details</button>
+          <div class="svc-details" id="svc-hvac">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Air Conditioning</h4><p>Split, VRF/VRV and central</p></div>
+              <div class="service-item-compact"><h4>Ventilation</h4><p>Fresh air and exhaust systems</p></div>
+              <div class="service-item-compact"><h4>Chilled Water</h4><p>Chillers and cooling towers</p></div>
+              <div class="service-item-compact"><h4>Ductwork</h4><p>Piping, insulation and controls</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Fire Fighting Systems.jpg" alt="Fire Fighting Systems"></div>
+          <h3>Fire Fighting Systems</h3>
+          <p>Detection, suppression and life safety systems.</p>
+          <button class="btn-view-details" data-target="svc-fire">View Details</button>
+          <div class="svc-details" id="svc-fire">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Fire Alarm</h4><p>Detection and notification</p></div>
+              <div class="service-item-compact"><h4>Hydrant Systems</h4><p>Hose reels and fire pumps</p></div>
+              <div class="service-item-compact"><h4>Sprinklers</h4><p>Automatic and deluge systems</p></div>
+              <div class="service-item-compact"><h4>Safety Compliance</h4><p>Assessments and training</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Lift & Elevator Systems.jpg" alt="Lift & Elevator Systems"></div>
+          <h3>Lift & Elevator Systems</h3>
+          <p>Supply, installation and maintenance of elevators.</p>
+          <button class="btn-view-details" data-target="svc-lift">View Details</button>
+          <div class="svc-details" id="svc-lift">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Passenger Lifts</h4><p>Traction and hydraulic</p></div>
+              <div class="service-item-compact"><h4>Goods Lifts</h4><p>Heavy-duty industrial</p></div>
+              <div class="service-item-compact"><h4>Testing</h4><p>Load testing and commissioning</p></div>
+              <div class="service-item-compact"><h4>Maintenance</h4><p>Preventive and modernization</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/MEP Services.jpg" alt="Electrical Systems"></div>
+          <h3>Electrical Systems</h3>
+          <p>Power distribution, lighting and emergency power.</p>
+          <button class="btn-view-details" data-target="svc-electrical">View Details</button>
+          <div class="svc-details" id="svc-electrical">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Power Distribution</h4><p>HT/LT panels and transformers</p></div>
+              <div class="service-item-compact"><h4>Lighting</h4><p>LED, smart and emergency</p></div>
+              <div class="service-item-compact"><h4>Backup Power</h4><p>Generators and UPS systems</p></div>
+              <div class="service-item-compact"><h4>Earthing</h4><p>Lightning and surge protection</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/MEP Services.jpg" alt="Mechanical Systems"></div>
+          <h3>Mechanical Systems</h3>
+          <p>Industrial mechanical installations and equipment.</p>
+          <button class="btn-view-details" data-target="svc-mech">View Details</button>
+          <div class="svc-details" id="svc-mech">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Industrial Mechanical</h4><p>Piping and equipment installation</p></div>
+              <div class="service-item-compact"><h4>Fire Protection</h4><p>Suppression and detection</p></div>
+              <div class="service-item-compact"><h4>Plumbing</h4><p>Water supply and drainage</p></div>
+              <div class="service-item-compact"><h4>BMS</h4><p>Building management systems</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/MEP Services.jpg" alt="Plumbing Systems"></div>
+          <h3>Plumbing Systems</h3>
+          <p>Water supply, drainage and sanitary installations.</p>
+          <button class="btn-view-details" data-target="svc-plumbing">View Details</button>
+          <div class="svc-details" id="svc-plumbing">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Water Supply</h4><p>Hot and cold water distribution</p></div>
+              <div class="service-item-compact"><h4>Drainage</h4><p>Soil, waste and rain water</p></div>
+              <div class="service-item-compact"><h4>Sanitary Ware</h4><p>Fittings and accessories</p></div>
+              <div class="service-item-compact"><h4>Sewage</h4><p>Treatment and disposal</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Construction Materials Supply.jpg" alt="Construction Materials Supply"></div>
+          <h3>Construction Materials Supply</h3>
+          <p>Concrete, steel, aggregates and finishing materials.</p>
+          <button class="btn-view-details" data-target="svc-materials">View Details</button>
+          <div class="svc-details" id="svc-materials">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Concrete</h4><p>Ready-mix and precast</p></div>
+              <div class="service-item-compact"><h4>Steel</h4><p>Structural and reinforcement</p></div>
+              <div class="service-item-compact"><h4>Aggregates</h4><p>Sand, gravel and stone</p></div>
+              <div class="service-item-compact"><h4>Finishing</h4><p>Plaster, paint and tiles</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Construction Materials Supply.jpg" alt="Quality Assurance"></div>
+          <h3>Quality Assurance / QA-QC</h3>
+          <p>Inspection, testing and compliance verification.</p>
+          <button class="btn-view-details" data-target="svc-qa">View Details</button>
+          <div class="svc-details" id="svc-qa">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Material Testing</h4><p>Lab and field testing</p></div>
+              <div class="service-item-compact"><h4>Inspection</h4><p>Workmanship verification</p></div>
+              <div class="service-item-compact"><h4>Documentation</h4><p>Quality records and reports</p></div>
+              <div class="service-item-compact"><h4>Compliance</h4><p>Code and standard adherence</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Construction Materials Supply.jpg" alt="Health & Safety"></div>
+          <h3>Health & Safety</h3>
+          <p>HSE management, risk assessment and site safety.</p>
+          <button class="btn-view-details" data-target="svc-hse">View Details</button>
+          <div class="svc-details" id="svc-hse">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Risk Assessment</h4><p>Hazard identification and control</p></div>
+              <div class="service-item-compact"><h4>Safety Training</h4><p>Inductions and toolbox talks</p></div>
+              <div class="service-item-compact"><h4>PPE Management</h4><p>Provision and compliance</p></div>
+              <div class="service-item-compact"><h4>Incident Reporting</h4><p>Investigation and corrective action</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/Civil & Structural Engineering.jpg" alt="Site Supervision"></div>
+          <h3>Site Supervision</h3>
+          <p>On-site oversight of construction quality and progress.</p>
+          <button class="btn-view-details" data-target="svc-supervision">View Details</button>
+          <div class="svc-details" id="svc-supervision">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>Daily Supervision</h4><p>Workforce and activity monitoring</p></div>
+              <div class="service-item-compact"><h4>Quality Checks</h4><p>Material and workmanship verification</p></div>
+              <div class="service-item-compact"><h4>Progress Tracking</h4><p>Photo documentation and reporting</p></div>
+              <div class="service-item-compact"><h4>Submittals</h4><p>Shop drawings and material approvals</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img"><img src="image/MEP Services.jpg" alt="Testing & Commissioning"></div>
+          <h3>Testing & Commissioning</h3>
+          <p>System testing, balancing and handover preparation.</p>
+          <button class="btn-view-details" data-target="svc-tc">View Details</button>
+          <div class="svc-details" id="svc-tc">
+            <div class="svc-details-grid">
+              <div class="service-item-compact"><h4>System Testing</h4><p>Individual and integrated testing</p></div>
+              <div class="service-item-compact"><h4>Balancing</h4><p>Air and water balancing</p></div>
+              <div class="service-item-compact"><h4>Commissioning</h4><p>Performance verification</p></div>
+              <div class="service-item-compact"><h4>Handover</h4><p>O&M manuals and training</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

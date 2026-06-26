@@ -99,136 +99,43 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ==========================================
-  // EXPANDABLE SERVICE SECTIONS
+  // VIEW DETAILS BUTTONS (Services Grid)
   // ==========================================
-  function waitForImages(container) {
-    var images = container.querySelectorAll('img');
-    var promises = [];
-    images.forEach(function(img) {
-      if (img.complete) return;
-      promises.push(new Promise(function(resolve) {
-        img.addEventListener('load', resolve);
-        img.addEventListener('error', resolve);
-      }));
-    });
-    return Promise.all(promises);
-  }
-
-  function expandContainer(contentEl) {
-    contentEl.style.height = '0px';
-    contentEl.style.overflow = 'hidden';
-    waitForImages(contentEl).then(function() {
-      var targetH = contentEl.scrollHeight;
-      contentEl.style.height = targetH + 'px';
-      setTimeout(function() {
-        contentEl.style.height = 'auto';
-        contentEl.style.overflow = 'visible';
-      }, 550);
-    });
-  }
-
-  function collapseContainer(contentEl) {
-    contentEl.style.height = contentEl.scrollHeight + 'px';
-    contentEl.offsetHeight;
-    contentEl.style.height = '0px';
-    contentEl.style.overflow = 'hidden';
-  }
-
-  document.querySelectorAll('.service-expandable-header').forEach(function(header) {
-    header.addEventListener('click', function() {
-      var parent = this.closest('.service-expandable');
-      if (!parent) return;
-      var content = parent.querySelector('.service-expandable-content');
-      if (!content) return;
-      var isActive = parent.classList.contains('active');
-
-      if (isActive) {
-        collapseContainer(content);
-        parent.classList.remove('active');
-      } else {
-        // Close all other open service accordions
-        document.querySelectorAll('.service-expandable.active').forEach(function(other) {
-          if (other !== parent) {
-            var otherContent = other.querySelector('.service-expandable-content');
-            if (otherContent) collapseContainer(otherContent);
-            other.classList.remove('active');
-          }
-        });
-        parent.classList.add('active');
-        expandContainer(content);
-        // Scroll into view after short delay
-        setTimeout(function() {
-          parent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
-    });
-  });
-
-  // ==========================================
-  // EXPANDABLE SUB-SECTIONS (within services)
-  // ==========================================
-  document.querySelectorAll('.service-sub-header').forEach(function(header) {
-    header.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var parent = this.closest('.service-sub-expandable');
-      if (!parent) return;
-      var content = parent.querySelector('.service-sub-content');
-      if (!content) return;
-      var isActive = parent.classList.contains('active');
-
-      if (isActive) {
-        collapseContainer(content);
-        parent.classList.remove('active');
-      } else {
-        // Close other sub-sections within the same parent
-        var parentService = parent.closest('.service-expandable-content');
-        if (parentService) {
-          parentService.querySelectorAll('.service-sub-expandable.active').forEach(function(other) {
-            if (other !== parent) {
-              var otherContent = other.querySelector('.service-sub-content');
-              if (otherContent) collapseContainer(otherContent);
-              other.classList.remove('active');
-            }
-          });
-        }
-        parent.classList.add('active');
-        expandContainer(content);
-      }
-    });
-  });
-
-  // ==========================================
-  // LEARN MORE BUTTONS
-  // ==========================================
-  document.querySelectorAll('.btn-learn-more').forEach(function(btn) {
+  document.querySelectorAll('.btn-view-details').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var targetId = this.getAttribute('data-target');
       if (!targetId) return;
-      var parent = this.closest('.service-expandable');
-      if (!parent) return;
-      var content = document.getElementById(targetId);
-      if (!content) return;
-      var isActive = parent.classList.contains('active');
+      var details = document.getElementById(targetId);
+      if (!details) return;
+      var isActive = details.classList.contains('active');
 
-      if (isActive) {
-        collapseContainer(content);
-        parent.classList.remove('active');
-      } else {
-        // Close all other open service accordions
-        document.querySelectorAll('.service-expandable.active').forEach(function(other) {
-          if (other !== parent) {
-            var otherContent = other.querySelector('.service-expandable-content');
-            if (otherContent) collapseContainer(otherContent);
-            other.classList.remove('active');
+      // Close all other open details
+      document.querySelectorAll('.svc-details.active').forEach(function(other) {
+        if (other !== details) other.classList.remove('active');
+      });
+
+      // Toggle current
+      details.classList.toggle('active');
+
+      // Update button text
+      this.textContent = details.classList.contains('active') ? 'Hide Details' : 'View Details';
+    });
+  });
+
+  // Reset all other buttons when one opens
+  document.querySelectorAll('.btn-view-details').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var allBtns = document.querySelectorAll('.btn-view-details');
+      var targetId = this.getAttribute('data-target');
+      allBtns.forEach(function(b) {
+        if (b !== btn) {
+          var bTargetId = b.getAttribute('data-target');
+          var bDetails = document.getElementById(bTargetId);
+          if (bDetails && !bDetails.classList.contains('active')) {
+            b.textContent = 'View Details';
           }
-        });
-        parent.classList.add('active');
-        expandContainer(content);
-        // Scroll into view after short delay
-        setTimeout(function() {
-          parent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
+        }
+      });
     });
   });
 
