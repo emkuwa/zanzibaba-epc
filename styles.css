@@ -133,7 +133,7 @@ a { color: inherit; text-decoration: none; }
    HERO SECTION
    ============================================ */
 .hero {
-  min-height: 100vh;
+  min-height: 75vh;
   background: linear-gradient(135deg, rgba(10, 36, 99, 0.7) 0%, rgba(26, 26, 46, 0.8) 100%), url('image/Cover Page.jpg');
   background-size: cover;
   background-position: center;
@@ -143,7 +143,8 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 .hero::before {
   content: '';
@@ -155,7 +156,7 @@ a { color: inherit; text-decoration: none; }
 .hero-content {
   text-align: center;
   z-index: 2;
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 1000px;
 }
 .hero-badge {
@@ -168,7 +169,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.8rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   white-space: nowrap;
   font-weight: 600;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
@@ -177,7 +178,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--white);
   font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   letter-spacing: -1px;
   line-height: 1.1;
   text-shadow: 0 2px 12px rgba(0,0,0,0.4);
@@ -186,7 +187,7 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255,255,255,0.85);
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -202,7 +203,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Buttons */
 .btn {
-  padding: 1rem 2.5rem;
+  padding: 0.875rem 2.75rem;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
@@ -214,6 +215,7 @@ a { color: inherit; text-decoration: none; }
   border: none;
   font-size: 1rem;
   font-family: inherit;
+  min-height: 48px;
 }
 .btn-primary { background: var(--white); color: var(--primary-blue); }
 .btn-primary:hover {
@@ -1486,6 +1488,7 @@ svg { display: inline-block; vertical-align: middle; }
    RESPONSIVE - TABLET
    ============================================ */
 @media (max-width: 1024px) {
+  .hero { min-height: 70vh; }
   .capability-grid { grid-template-columns: repeat(2, 1fr); }
   .why-compact-grid { grid-template-columns: repeat(2, 1fr); }
   .procurement-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1525,17 +1528,17 @@ svg { display: inline-block; vertical-align: middle; }
 
   /* Hero */
   .hero {
-    padding-top: 100px;
-    min-height: 100vh;
-    min-height: 100dvh;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    min-height: 65vh;
   }
-  .hero h1 { font-size: 2.25rem; }
-  .hero-subtitle { font-size: 1rem; }
+  .hero h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+  .hero-subtitle { font-size: 1rem; margin-bottom: 1.25rem; }
   .hero-badge {
     font-size: 0.65rem;
     padding: 6px 16px;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   /* Sections */
@@ -1622,13 +1625,20 @@ svg { display: inline-block; vertical-align: middle; }
    RESPONSIVE - SMALL MOBILE
    ============================================ */
 @media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    padding-top: 60px;
+    padding-bottom: 24px;
+  }
   .hero-badge {
     font-size: 0.6rem;
     padding: 5px 14px;
     letter-spacing: 0.8px;
   }
   .hero h1 { font-size: 1.85rem; }
-  .hero-subtitle { font-size: 0.9rem; }
+  .hero-subtitle { font-size: 0.9rem; margin-bottom: 1rem; }
+  .hero-cta { gap: 0.75rem; }
+  .btn { padding: 0.75rem 2rem; min-height: 44px; }
   .why-featured { border-top-width: 2px; }
   .footer-bottom-inner { gap: 0.5rem; }
 }
