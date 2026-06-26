@@ -118,12 +118,12 @@ document.addEventListener('DOMContentLoaded', function() {
     contentEl.style.height = '0px';
     contentEl.style.overflow = 'hidden';
     waitForImages(contentEl).then(function() {
-      contentEl.style.height = contentEl.scrollHeight + 'px';
-      contentEl.addEventListener('transitionend', function handler() {
+      var targetH = contentEl.scrollHeight;
+      contentEl.style.height = targetH + 'px';
+      setTimeout(function() {
         contentEl.style.height = 'auto';
         contentEl.style.overflow = 'visible';
-        contentEl.removeEventListener('transitionend', handler);
-      });
+      }, 550);
     });
   }
 
