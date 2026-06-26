@@ -888,12 +888,9 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(180deg);
 }
 .service-expandable-content {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-.service-expandable.active .service-expandable-content {
-  max-height: 3000px;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .service-hero-img {
   width: 100%;
@@ -958,12 +955,9 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(180deg);
 }
 .service-sub-content {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-.service-sub-expandable.active .service-sub-content {
-  max-height: 1000px;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Team compact grid */
@@ -1675,8 +1669,8 @@ svg { display: inline-block; vertical-align: middle; }
 @media print {
   .navbar, .hero-cta, .btn, .btn-read-more, .menu-toggle { display: none; }
   .expandable-content { max-height: none !important; opacity: 1 !important; }
-  .service-expandable-content { max-height: none !important; }
-  .service-sub-content { max-height: none !important; }
+  .service-expandable-content { height: auto !important; }
+  .service-sub-content { height: auto !important; }
   .page-section { padding: 40px 20px; }
   body { font-size: 12pt; }
 }

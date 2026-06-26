@@ -101,11 +101,53 @@ document.addEventListener('DOMContentLoaded', function() {
   // ==========================================
   // EXPANDABLE SERVICE SECTIONS
   // ==========================================
+  function waitForImages(container) {
+    var images = container.querySelectorAll('img');
+    var promises = [];
+    images.forEach(function(img) {
+      if (img.complete) return;
+      promises.push(new Promise(function(resolve) {
+        img.addEventListener('load', resolve);
+        img.addEventListener('error', resolve);
+      }));
+    });
+    return Promise.all(promises);
+  }
+
+  function expandContainer(contentEl) {
+    contentEl.style.height = '0px';
+    contentEl.style.overflow = 'hidden';
+    waitForImages(contentEl).then(function() {
+      contentEl.style.height = contentEl.scrollHeight + 'px';
+      contentEl.addEventListener('transitionend', function handler() {
+        contentEl.style.height = 'auto';
+        contentEl.style.overflow = 'visible';
+        contentEl.removeEventListener('transitionend', handler);
+      });
+    });
+  }
+
+  function collapseContainer(contentEl) {
+    contentEl.style.height = contentEl.scrollHeight + 'px';
+    contentEl.offsetHeight;
+    contentEl.style.height = '0px';
+    contentEl.style.overflow = 'hidden';
+  }
+
   document.querySelectorAll('.service-expandable-header').forEach(function(header) {
     header.addEventListener('click', function() {
       var parent = this.closest('.service-expandable');
       if (!parent) return;
-      parent.classList.toggle('active');
+      var content = parent.querySelector('.service-expandable-content');
+      if (!content) return;
+      var isActive = parent.classList.contains('active');
+      if (isActive) {
+        collapseContainer(content);
+        parent.classList.remove('active');
+      } else {
+        parent.classList.add('active');
+        expandContainer(content);
+      }
     });
   });
 
@@ -117,7 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
       e.stopPropagation();
       var parent = this.closest('.service-sub-expandable');
       if (!parent) return;
-      parent.classList.toggle('active');
+      var content = parent.querySelector('.service-sub-content');
+      if (!content) return;
+      var isActive = parent.classList.contains('active');
+      if (isActive) {
+        collapseContainer(content);
+        parent.classList.remove('active');
+      } else {
+        parent.classList.add('active');
+        expandContainer(content);
+      }
     });
   });
 
